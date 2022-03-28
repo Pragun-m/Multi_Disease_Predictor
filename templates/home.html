@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="og:title" content="AI Disease Predictor">
+		<meta name="author" content="KJSCE GROUP 28 Batch 2018-22">
+		<meta name="og:image" content="static/logo1.png">
+		<meta name="Keywords" content="Flask, Machine Learning, Deep Learning, Artificial Intelligence, AI, ML,DL, Web Development">
+		<meta name="description" content="AI based webapp for Multiple Disease Prediction.">
+		<title>Disease Predictor</title>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/mainpage1.css') }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename = 'logo.png') }}" align="left"></a>
+      <ul>
+        <li><a class="active" href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('diabetesPage') }}">Diabetes</a></li>
+        <li><a href="{{ url_for('heartPage') }}">Heart</a></li>
+        <li><a href="{{ url_for('kidneyPage') }}">Kidney</a></li>
+		<li><a href="{{ url_for('liverPage') }}">Liver</a></li>
+		<li><a href="{{ url_for('malariaPage') }}">Malaria</a></li>
+		<li><a href="{{ url_for('pneumoniaPage') }}">Pneumonia</a></li>
+      </ul>
+    </nav>
+<header>
+	<div>
+		<h1>Human Diseases Prediction Using Artificial Intelligence</h1>
+	</div>
+</header>
+<main>
+	<ul id="cards">
+		<li class="card" id="card_1">
+			<div class="card__content">
+				<div>
+							<h2>Diabetes</h2>
+					<p align="justify">Diabetes is a disease that occurs when your blood glucose, also called blood sugar, is too high. Blood glucose is your main source of energy and comes from the food you eat. Insulin, a hormone made by the pancreas, helps glucose from food get into your cells to be used for energy. Sometimes your body doesn’t make enough or any insulin or doesn’t use insulin well. Glucose then stays in your blood and doesn’t reach your cells.</p>
+                <h3>Symptoms</h3>
+                <ul>
+                    <li style="margin-left:40px">Urinating often.</li>
+                    <li style="margin-left:40px">Feeling thirsty.</li>
+                    <li style="margin-left:40px">Extreme fatigue.</li>
+                    <li style="margin-left:40px">Blurry vision.</li>
+                </ul>
+					<p><a href="{{ url_for('diabetesPage') }}" class="btn btn--accent">Test</a></p>
+				</div>
+				<figure>
+					<img src="{{url_for('static', filename='diab1.jpg')}}" alt="Image description">
+				</figure>
+			</div>
+		</li>
+		<li class="card" id="card_2">
+			<div class="card__content">
+				<div>
+					<h2>Kidney disease</h2>
+				<p align="justify">Chronic kidney disease, also called chronic kidney failure, describes the gradual loss of kidney function. Your kidneys filter wastes and excess fluids from your blood, which are then excreted in your urine. When chronic kidney disease reaches an advanced stage, dangerous levels of fluid, electrolytes and wastes can build up in your body.</p>
+                <h3>Symptoms</h3>
+                <ul>
+                    <li style="margin-left:40px">Nausea</li>
+                    <li style="margin-left:40px">Vomiting</li>
+                    <li style="margin-left:40px">Fatigue and weakness</li>
+                    <li style="margin-left:40px">Muscle twitches and cramps</li>
+                </ul>
+					<p><a href="{{ url_for('kidneyPage') }}" class="btn btn--accent">Test</a></p>
+				</div>
+				<figure>
+					<img src="{{url_for('static', filename='ckd.jpg')}}" alt="Image description">
+				</figure>
+			</div>
+		</li>
+		<li class="card" id="card_3">
+			<div class="card__content">
+				<div>
+					<h2>Heart Disease</h2>
+					<p align="justify">The term “heart disease” refers to several types of heart conditions. The most common type of heart disease in the United States is coronary artery disease (CAD), which affects the blood flow to the heart. Decreased blood flow can cause a heart attack.</p>
+ 		<h3>Symptoms</h3>
+                <ul>
+                    <li style="margin-left:40px">Chest pain, chest tightness, chest pressure and chest discomfort (angina).</li>
+                    <li style="margin-left:40px">Shortness of breath.</li>
+                    <li style="margin-left:40px">Pain, numbness, weakness or coldness in your legs or arms if the blood vessels in those parts of your body are narrowed.</li>
+                    <li style="margin-left:40px">Pain in the neck, jaw, throat, upper abdomen or back.</li>
+                </ul>
+					<p><a href="{{ url_for('heartPage') }}" class="btn btn--accent">Test</a></p>
+				</div>
+				<figure>
+					<img src="{{url_for('static', filename='humanheart-beating.gif')}}" alt="Image description">
+				</figure>
+			</div>
+		</li>
+				<li class="card" id="card_4">
+			<div class="card__content">
+				<div>
+					<h2>Liver disease</h2>
+					<p align="justify">Symptoms of liver disease can vary, but they often include swelling of the abdomen and legs, bruising easily, changes in the color of your stool and urine, and jaundice, or yellowing of the skin and eyes. Sometimes there are no symptoms. Tests such as imaging tests and liver function tests can check for liver damage and help to diagnose liver diseases.</p>
+					<p><a href="{{ url_for('liverPage') }}" class="btn btn--accent">Test</a></p>
+				</div>
+				<figure>
+					<img src="{{url_for('static', filename='liver.jpg')}}" alt="Image description">
+				</figure>
+			</div>
+		</li>
+				<li class="card" id="card_5">
+			<div class="card__content">
+				<div>
+					<h2>Malaria</h2>
+					<p align="justify">Malaria is a mosquito-borne infectious disease that affects humans and other animals. Malaria causes symptoms that typically include fever, tiredness, vomiting, and headaches. In severe cases it can cause yellow skin, seizures, coma, or death. Symptoms usually begin ten to fifteen days after being bitten by an infected mosquito. If not properly treated, people may have recurrences of the disease months later.</p>
+                <h3>Symptoms</h3>
+                <ul>
+                    <li style="margin-left:40px">Fever. This is the most common symptom.</li>
+                    <li style="margin-left:40px">Chills</li>
+                    <li style="margin-left:40px">Headache</li>
+                    <li style="margin-left:40px">Nausea and vomiting</li>
+                </ul>
+					<p><a href="{{ url_for('malariaPage') }}" class="btn btn--accent">Test</a></p>
+				</div>
+				<figure>
+					<img src="{{url_for('static', filename='malaria.jpg')}}" alt="Image description">
+				</figure>
+			</div>
+		</li>
+				<li class="card" id="card_6">
+			<div class="card__content">
+				<div>
+					<h2>Pneumonia</h2>
+					 <p align="justify">Pneumonia is an infection that inflames the air sacs in one or both lungs. The air sacs may fill with fluid or pus (purulent material), causing cough with phlegm or pus, fever, chills, and difficulty breathing. A variety of organisms, including bacteria, viruses and fungi, can cause pneumonia.</p>
+                <h3>Symptoms</h3>
+                <ul>
+                    <li style="margin-left:40px">Cough, which may produce greenish, yellow or even bloody mucus.</li>
+                    <li style="margin-left:40px">Fever, sweating and shaking chills.</li>
+                    <li style="margin-left:40px">Shortness of breath.</li>
+                    <li style="margin-left:40px">Rapid, shallow breathing.</li>
+                </ul>
+					<p><a href="{{ url_for('pneumoniaPage') }}" class="btn btn--accent">Test</a></p>
+				</div>
+				<figure>
+					<img src="{{url_for('static', filename='pneumonia.jpg')}}" alt="Image description">
+				</figure>
+			</div>
+		</li>
+	</ul>
+</main>
+<aside>
+        <br>
+        <h2>Model Accuracies:</h2>
+        <ul>
+            <li style="margin-left:40px">Diabetes Model: <strong>98.25%</strong></li>
+            <li style="margin-left:40px">Heart Disease Model: <strong>85.25%</strong></li>
+            <li style="margin-left:40px">Kidney Disease Model: <strong>99%</strong></li>
+            <li style="margin-left:40px">Liver Disease Model: <strong>78%</strong></li>
+            <li style="margin-left:40px">Malaria Model: <strong>96%</strong></li>
+            <li style="margin-left:40px">Pneumonia Model: <strong>95%</strong></li>
+        </ul>
+        <br>
+</aside>
+</html>
